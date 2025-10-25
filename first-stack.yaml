@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Minha primeira stack AWS CloudFormation - Bucket S3 de exemplo"
+
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "meu-bucket-exemplo-${AWS::AccountId}"
+      AccessControl: Private
